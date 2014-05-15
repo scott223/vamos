@@ -33,6 +33,7 @@
 		D21422111925306C00C7CF21 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21422081925306C00C7CF21 /* Security.framework */; };
 		D21422121925306C00C7CF21 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21422091925306C00C7CF21 /* StoreKit.framework */; };
 		D21422131925306C00C7CF21 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D214220A1925306C00C7CF21 /* SystemConfiguration.framework */; };
+		D2142215192531F500C7CF21 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2142214192531F500C7CF21 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		D21422081925306C00C7CF21 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D21422091925306C00C7CF21 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D214220A1925306C00C7CF21 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D2142214192531F500C7CF21 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				D21421C11925278400C7CF21 /* UIKit.framework in Frameworks */,
 				D214220119252F8C00C7CF21 /* Parse.framework in Frameworks */,
 				D21421BD1925278400C7CF21 /* Foundation.framework in Frameworks */,
+				D2142215192531F500C7CF21 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +140,7 @@
 		D21421BB1925278400C7CF21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D2142214192531F500C7CF21 /* FacebookSDK.framework */,
 				D21422021925306C00C7CF21 /* AudioToolbox.framework */,
 				D21422031925306C00C7CF21 /* CFNetwork.framework */,
 				D21422041925306C00C7CF21 /* CoreLocation.framework */,
