@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BalloonListTableViewController : UITableViewController
+@interface BalloonListTableViewController : UITableViewController {
+    NSMutableArray *balloonList;
+}
+
+@property (nonatomic, strong) NSMutableArray *balloonList;
+
+
 
 @end
