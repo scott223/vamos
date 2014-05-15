@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  ViewController.h
 //  Vamos
 //
 //  Created by Scott Brugmans on 15-05-14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface ViewController : UIViewController
 
 @end

@@ -1,18 +1,18 @@
 //
-//  SecondViewController.m
+//  ViewController.m
 //  Vamos
 //
 //  Created by Scott Brugmans on 15-05-14.
 //  Copyright (c) 2014 Scott Brugmans. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ViewController.h"
 
-@interface SecondViewController ()
+@interface ViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation ViewController
 
 - (void)viewDidLoad
 {
