@@ -36,6 +36,7 @@
 		D21422131925306C00C7CF21 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D214220A1925306C00C7CF21 /* SystemConfiguration.framework */; };
 		D2142215192531F500C7CF21 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2142214192531F500C7CF21 /* FacebookSDK.framework */; };
 		D21422181925545300C7CF21 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21422171925545300C7CF21 /* StartViewController.m */; };
+		D2AED2091925780900713526 /* ViewExistingBalloonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		D2142214192531F500C7CF21 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		D21422161925545300C7CF21 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		D21422171925545300C7CF21 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		D2AED2071925780900713526 /* ViewExistingBalloonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewExistingBalloonTableViewController.h; sourceTree = "<group>"; };
+		D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewExistingBalloonTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +182,8 @@
 				D21421FE19252D2B00C7CF21 /* MainTabBarController.m */,
 				D21421F4192527A200C7CF21 /* BalloonListTableViewController.h */,
 				D21421F5192527A200C7CF21 /* BalloonListTableViewController.m */,
+				D2AED2071925780900713526 /* ViewExistingBalloonTableViewController.h */,
+				D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */,
 				D21421F71925283D00C7CF21 /* NewBalloonTableViewController.h */,
 				D21421F81925283D00C7CF21 /* NewBalloonTableViewController.m */,
 				D21421D71925278400C7CF21 /* Images.xcassets */,
@@ -320,6 +325,7 @@
 				D21422181925545300C7CF21 /* StartViewController.m in Sources */,
 				D21421F91925283D00C7CF21 /* NewBalloonTableViewController.m in Sources */,
 				D21421C91925278400C7CF21 /* main.m in Sources */,
+				D2AED2091925780900713526 /* ViewExistingBalloonTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

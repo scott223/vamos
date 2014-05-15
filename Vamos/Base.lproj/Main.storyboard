@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="ZMD-iK-HG8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bo7-zj-UZ7">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrk-gh-Xvu">
@@ -60,10 +60,16 @@
         <!--New Balloon Table View Controller - Ballonetje Prikken-->
         <scene sceneID="0Mp-0r-hs6">
             <objects>
+<<<<<<< HEAD
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dCe-xN-K07" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController title="Ballonetje Prikken" id="68i-OP-2Ue" customClass="NewBalloonTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="k3t-0N-40u">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+=======
+                <tableViewController id="68i-OP-2Ue" customClass="NewBalloonTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="KvE-bR-9vu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+>>>>>>> FETCH_HEAD
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -232,12 +238,12 @@
             <objects>
                 <tableViewController id="sUe-yu-6zL" customClass="BalloonListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vc6-Lb-r9K">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="balloonCell" id="HFl-SQ-nrZ">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HFl-SQ-nrZ" id="aVv-rZ-71a">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -252,7 +258,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="T3t-Jn-64F"/>
                     <connections>
-                        <segue destination="vJq-Nn-i6c" kind="modal" identifier="showExisting" id="6Zj-ve-GAi"/>
+                        <segue destination="vJq-Nn-i6c" kind="push" identifier="showExisting" id="6Zj-ve-GAi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz6-PX-FEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,21 +270,32 @@
             <objects>
                 <tableViewController id="vJq-Nn-i6c" customClass="ViewExistingBalloonTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="eFx-JO-M5C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XSe-Ak-DFm">
+                            <rect key="frame" x="0.0" y="357" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Cancel">
+                                <color key="titleColor" red="1" green="0.13338242929999999" blue="0.098004718140000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="buttonCancel:" destination="vJq-Nn-i6c" eventType="touchUpInside" id="Dxb-5i-FCG"/>
+                            </connections>
+                        </button>
                         <sections>
                             <tableViewSection headerTitle="what" id="kcJ-NJ-Yz1">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="BOF-NQ-9HV">
-                                        <rect key="frame" x="0.0" y="55" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BOF-NQ-9HV" id="ZaP-J5-gwl">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxd-8U-Zja">
-                                                    <rect key="frame" x="20" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="280" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
@@ -291,7 +308,7 @@
                             <tableViewSection headerTitle="WHEN" id="jYd-Yb-4tj">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="UfB-Yd-8wz">
-                                        <rect key="frame" x="0.0" y="147" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="211" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UfB-Yd-8wz" id="2ka-mS-d1b">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -303,7 +320,7 @@
                             <tableViewSection headerTitle="WHERE" id="HNu-be-MeN">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="buc-SG-OPJ">
-                                        <rect key="frame" x="0.0" y="239" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="303" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="buc-SG-OPJ" id="AOz-9A-Lzm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -319,7 +336,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="labelWhat" destination="Gxd-8U-Zja" id="r12-QO-Pd8"/>
+                        <outlet property="labelWhat" destination="Gxd-8U-Zja" id="TIb-Eh-4Fc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="at2-PB-Ula" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -329,8 +346,13 @@
         <!--Navigation Controller - Ballonnetje Prikken-->
         <scene sceneID="Cbg-w4-Ylq">
             <objects>
+<<<<<<< HEAD
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2hk-i5-eay" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Ballonnetje Prikken" id="8Gz-w9-FdY"/>
+=======
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2hk-i5-eay" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Balloons" id="8Gz-w9-FdY"/>
+>>>>>>> FETCH_HEAD
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DLe-Te-S1Q">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -349,6 +371,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
