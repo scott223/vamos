@@ -1,22 +1,18 @@
 //
-//  BalloonListTableViewController.m
+//  ViewExistingBalloonTableViewController.m
 //  Vamos
 //
 //  Created by Scott Brugmans on 15-05-14.
 //  Copyright (c) 2014 Scott Brugmans. All rights reserved.
 //
 
-#import "BalloonListTableViewController.h"
-#import "Parse/Parse.h"
 #import "ViewExistingBalloonTableViewController.h"
 
-@interface BalloonListTableViewController ()
+@interface ViewExistingBalloonTableViewController ()
 
 @end
 
-@implementation BalloonListTableViewController
-
-@synthesize balloonList;
+@implementation ViewExistingBalloonTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -24,37 +20,7 @@
     if (self) {
         // Custom initialization
     }
-    
-    balloonList = [[NSMutableArray alloc] init];
-    
     return self;
-}
-
-- (void)updateBalloons
-{
-    PFQuery *query = [PFQuery queryWithClassName:@"Balloon"];
-    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
-        if (!error) {
-            // The find succeeded.
-            NSLog(@"Successfully retrieved %d balloons.", objects.count);
-            
-            [balloonList removeAllObjects];
-            
-            // Do something with the found objects
-            //for (PFObject *object in objects) {
-            //    [balloonList setValue:object forKey:object.objectId];
-            //    NSLog(@"%@", object.objectId);
-            //}
-            
-            balloonList = objects;
-            
-            [self.tableView reloadData];
-            [self.refreshControl endRefreshing];
-        } else {
-            // Log details of the failure
-            NSLog(@"Error: %@ %@", error, [error userInfo]);
-        }
-    }];
 }
 
 - (void)viewDidLoad
@@ -67,12 +33,6 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    UIRefreshControl *refreshControl = [[UIRefreshControl alloc] init];
-    [refreshControl addTarget:self action:@selector(updateBalloons)
-             forControlEvents:UIControlEventValueChanged];
-    self.refreshControl = refreshControl;
-    
-    [self updateBalloons];
     
 }
 
@@ -88,43 +48,26 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [balloonList count];
+    return 0;
 }
 
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    static NSString *cellIdentifier = @"balloonCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    //5.1 you do not need this if you have set SettingsCell as identifier in the storyboard (else you can remove the comments on this code)
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-        
-        NSLog(@"deque");
-    }
-    
-    [cell.textLabel setText:[[balloonList objectAtIndex:indexPath.row] objectForKey:@"what"]];
+    // Configure the cell...
     
     return cell;
 }
-
-- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
-{
-    
-    [self performSegueWithIdentifier:@"showExisting" sender:self];
-    
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.
