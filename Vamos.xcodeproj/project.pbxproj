@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C84DC261925618800FB5D7F /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84DC251925618800FB5D7F /* CustomButton.m */; };
 		D21421BD1925278400C7CF21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21421BC1925278400C7CF21 /* Foundation.framework */; };
 		D21421BF1925278400C7CF21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21421BE1925278400C7CF21 /* CoreGraphics.framework */; };
 		D21421C11925278400C7CF21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21421C01925278400C7CF21 /* UIKit.framework */; };
@@ -36,8 +35,6 @@
 		D21422131925306C00C7CF21 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D214220A1925306C00C7CF21 /* SystemConfiguration.framework */; };
 		D2142215192531F500C7CF21 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2142214192531F500C7CF21 /* FacebookSDK.framework */; };
 		D21422181925545300C7CF21 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21422171925545300C7CF21 /* StartViewController.m */; };
-		D247D51D192567D900DC9D90 /* ViewExistingBalloonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D247D51C192567D900DC9D90 /* ViewExistingBalloonTableViewController.m */; };
-		D247D52119256C2000DC9D90 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D247D51F19256C2000DC9D90 /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C84DC241925618800FB5D7F /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
-		0C84DC251925618800FB5D7F /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		D21421B91925278400C7CF21 /* Vamos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vamos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21421BC1925278400C7CF21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D21421BE1925278400C7CF21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -89,10 +84,6 @@
 		D2142214192531F500C7CF21 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		D21422161925545300C7CF21 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		D21422171925545300C7CF21 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
-		D247D51B192567D800DC9D90 /* ViewExistingBalloonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewExistingBalloonTableViewController.h; sourceTree = "<group>"; };
-		D247D51C192567D900DC9D90 /* ViewExistingBalloonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewExistingBalloonTableViewController.m; sourceTree = "<group>"; };
-		D247D51E19256C2000DC9D90 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
-		D247D51F19256C2000DC9D90 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,13 +168,6 @@
 				D21421CB1925278400C7CF21 /* AppDelegate.h */,
 				D21421CC1925278400C7CF21 /* AppDelegate.m */,
 				D21421CE1925278400C7CF21 /* Main.storyboard */,
-<<<<<<< HEAD
-				D247D51E19256C2000DC9D90 /* TableViewController.h */,
-				D247D51F19256C2000DC9D90 /* TableViewController.m */,
-=======
-				0C84DC241925618800FB5D7F /* CustomButton.h */,
-				0C84DC251925618800FB5D7F /* CustomButton.m */,
->>>>>>> FETCH_HEAD
 				D21422161925545300C7CF21 /* StartViewController.h */,
 				D21422171925545300C7CF21 /* StartViewController.m */,
 				D21421FD19252D2B00C7CF21 /* MainTabBarController.h */,
@@ -192,8 +176,6 @@
 				D21421F5192527A200C7CF21 /* BalloonListTableViewController.m */,
 				D21421F71925283D00C7CF21 /* NewBalloonTableViewController.h */,
 				D21421F81925283D00C7CF21 /* NewBalloonTableViewController.m */,
-				D247D51B192567D800DC9D90 /* ViewExistingBalloonTableViewController.h */,
-				D247D51C192567D900DC9D90 /* ViewExistingBalloonTableViewController.m */,
 				D21421D71925278400C7CF21 /* Images.xcassets */,
 				D21421C31925278400C7CF21 /* Supporting Files */,
 			);
@@ -328,13 +310,10 @@
 			files = (
 				D21421CD1925278400C7CF21 /* AppDelegate.m in Sources */,
 				D21421FF19252D2B00C7CF21 /* MainTabBarController.m in Sources */,
-				D247D51D192567D900DC9D90 /* ViewExistingBalloonTableViewController.m in Sources */,
 				D21421F6192527A200C7CF21 /* BalloonListTableViewController.m in Sources */,
-				0C84DC261925618800FB5D7F /* CustomButton.m in Sources */,
 				D21422181925545300C7CF21 /* StartViewController.m in Sources */,
 				D21421F91925283D00C7CF21 /* NewBalloonTableViewController.m in Sources */,
 				D21421C91925278400C7CF21 /* main.m in Sources */,
-				D247D52119256C2000DC9D90 /* TableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

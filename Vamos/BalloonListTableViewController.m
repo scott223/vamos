@@ -8,7 +8,6 @@
 
 #import "BalloonListTableViewController.h"
 #import "Parse/Parse.h"
-#import "ViewExistingBalloonTableViewController.h"
 
 @interface BalloonListTableViewController ()
 
@@ -119,12 +118,6 @@
     return cell;
 }
 
-- (void)tableView: (UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath *)indexPath
-{
-    
-    [self performSegueWithIdentifier:@"showExisting" sender:self];
-    
-}
 
 /*
 // Override to support conditional editing of the table view.
