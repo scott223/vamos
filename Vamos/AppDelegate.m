@@ -33,9 +33,6 @@
     
     //PFUser *currentUser = [PFUser currentUser];
     
-    [PFUser logOut];
-    
-    
     return YES;
 }
 
