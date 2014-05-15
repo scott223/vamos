@@ -42,19 +42,6 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
-}
 
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -115,5 +102,15 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+/* (voor als we ooit nog een search bar willen!
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[NSSString stringWithFormat:@"http://%@",searchBar.text]]]];
+    [webview addSubview:ActivityInd];
+}
+-(void)searchBarCancelButtonClicked: (UISearchBar *)searchBar {
+    searchBar.text = nil;
+    [searchBar resignFirstResponder];
+}
+*/
 @end
