@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>65B4B332-B7E5-4DC5-B23F-B77A01CBBB10</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Vamos</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>64603312-67ED-4253-BD12-11A69C10EA3F</key>
+		<string>https://github.com/scott223/vamos.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Vamos.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>64603312-67ED-4253-BD12-11A69C10EA3F</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/scott223/vamos.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>64603312-67ED-4253-BD12-11A69C10EA3F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>64603312-67ED-4253-BD12-11A69C10EA3F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>vamosGIT</string>
+		</dict>
+	</array>
+</dict>
+</plist>

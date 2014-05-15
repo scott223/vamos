@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2142136192526DB00C7CF21"
+               BlueprintIdentifier = "D21421B81925278400C7CF21"
                BuildableName = "Vamos.app"
                BlueprintName = "Vamos"
                ReferencedContainer = "container:Vamos.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D2142157192526DC00C7CF21"
+               BlueprintIdentifier = "D21421DC1925278400C7CF21"
                BuildableName = "VamosTests.xctest"
                BlueprintName = "VamosTests"
                ReferencedContainer = "container:Vamos.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2142136192526DB00C7CF21"
+            BlueprintIdentifier = "D21421B81925278400C7CF21"
             BuildableName = "Vamos.app"
             BlueprintName = "Vamos"
             ReferencedContainer = "container:Vamos.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2142136192526DB00C7CF21"
+            BlueprintIdentifier = "D21421B81925278400C7CF21"
             BuildableName = "Vamos.app"
             BlueprintName = "Vamos"
             ReferencedContainer = "container:Vamos.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D2142136192526DB00C7CF21"
+            BlueprintIdentifier = "D21421B81925278400C7CF21"
             BuildableName = "Vamos.app"
             BlueprintName = "Vamos"
             ReferencedContainer = "container:Vamos.xcodeproj">
