@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface StartViewController : UIViewController
-- (IBAction)buttonStart:(id)sender;
-
+- (IBAction)startSegue:(id)sender;
 
 @end

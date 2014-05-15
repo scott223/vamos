@@ -34,6 +34,7 @@
 		D21422121925306C00C7CF21 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21422091925306C00C7CF21 /* StoreKit.framework */; };
 		D21422131925306C00C7CF21 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D214220A1925306C00C7CF21 /* SystemConfiguration.framework */; };
 		D2142215192531F500C7CF21 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2142214192531F500C7CF21 /* FacebookSDK.framework */; };
+		D21422181925545300C7CF21 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21422171925545300C7CF21 /* StartViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		D21422091925306C00C7CF21 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D214220A1925306C00C7CF21 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D2142214192531F500C7CF21 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		D21422161925545300C7CF21 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		D21422171925545300C7CF21 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +168,8 @@
 				D21421CB1925278400C7CF21 /* AppDelegate.h */,
 				D21421CC1925278400C7CF21 /* AppDelegate.m */,
 				D21421CE1925278400C7CF21 /* Main.storyboard */,
+				D21422161925545300C7CF21 /* StartViewController.h */,
+				D21422171925545300C7CF21 /* StartViewController.m */,
 				D21421FD19252D2B00C7CF21 /* MainTabBarController.h */,
 				D21421FE19252D2B00C7CF21 /* MainTabBarController.m */,
 				D21421F4192527A200C7CF21 /* BalloonListTableViewController.h */,
@@ -306,6 +311,7 @@
 				D21421CD1925278400C7CF21 /* AppDelegate.m in Sources */,
 				D21421FF19252D2B00C7CF21 /* MainTabBarController.m in Sources */,
 				D21421F6192527A200C7CF21 /* BalloonListTableViewController.m in Sources */,
+				D21422181925545300C7CF21 /* StartViewController.m in Sources */,
 				D21421F91925283D00C7CF21 /* NewBalloonTableViewController.m in Sources */,
 				D21421C91925278400C7CF21 /* main.m in Sources */,
 			);
