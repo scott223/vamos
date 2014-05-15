@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C84DC261925618800FB5D7F /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84DC251925618800FB5D7F /* CustomButton.m */; };
 		D21421BD1925278400C7CF21 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21421BC1925278400C7CF21 /* Foundation.framework */; };
 		D21421BF1925278400C7CF21 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21421BE1925278400C7CF21 /* CoreGraphics.framework */; };
 		D21421C11925278400C7CF21 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21421C01925278400C7CF21 /* UIKit.framework */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C84DC241925618800FB5D7F /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		0C84DC251925618800FB5D7F /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		D21421B91925278400C7CF21 /* Vamos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vamos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D21421BC1925278400C7CF21 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D21421BE1925278400C7CF21 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,8 +177,13 @@
 				D21421CB1925278400C7CF21 /* AppDelegate.h */,
 				D21421CC1925278400C7CF21 /* AppDelegate.m */,
 				D21421CE1925278400C7CF21 /* Main.storyboard */,
+<<<<<<< HEAD
 				D247D51E19256C2000DC9D90 /* TableViewController.h */,
 				D247D51F19256C2000DC9D90 /* TableViewController.m */,
+=======
+				0C84DC241925618800FB5D7F /* CustomButton.h */,
+				0C84DC251925618800FB5D7F /* CustomButton.m */,
+>>>>>>> FETCH_HEAD
 				D21422161925545300C7CF21 /* StartViewController.h */,
 				D21422171925545300C7CF21 /* StartViewController.m */,
 				D21421FD19252D2B00C7CF21 /* MainTabBarController.h */,
@@ -322,6 +330,7 @@
 				D21421FF19252D2B00C7CF21 /* MainTabBarController.m in Sources */,
 				D247D51D192567D900DC9D90 /* ViewExistingBalloonTableViewController.m in Sources */,
 				D21421F6192527A200C7CF21 /* BalloonListTableViewController.m in Sources */,
+				0C84DC261925618800FB5D7F /* CustomButton.m in Sources */,
 				D21422181925545300C7CF21 /* StartViewController.m in Sources */,
 				D21421F91925283D00C7CF21 /* NewBalloonTableViewController.m in Sources */,
 				D21421C91925278400C7CF21 /* main.m in Sources */,
