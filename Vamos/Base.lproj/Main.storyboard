@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrk-gh-Xvu">
-                                <rect key="frame" x="64" y="331" width="192" height="30"/>
+                                <rect key="frame" x="64" y="269" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login &amp; Start using VAMOS!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,13 +26,6 @@
                                     <action selector="startSegue:" destination="j0t-BT-FBq" eventType="touchUpInside" id="kwb-KR-Orc"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="A story about vamos" translatesAutoresizingMaskIntoConstraints="NO" id="UKj-xc-VTq">
-                                <rect key="frame" x="50" y="169" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -48,7 +41,11 @@
         <scene sceneID="Vex-rW-GRa">
             <objects>
                 <tabBarController id="8YX-ce-x5E" customClass="MainTabBarController" sceneMemberID="viewController">
+<<<<<<< HEAD
                     <navigationItem key="navigationItem" id="mck-Qb-mQY"/>
+=======
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+>>>>>>> FETCH_HEAD
                     <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
@@ -57,6 +54,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+<<<<<<< HEAD
+=======
+                        <segue destination="2hk-i5-eay" kind="relationship" relationship="viewControllers" id="eQh-6K-sVA"/>
+>>>>>>> FETCH_HEAD
                         <segue destination="68i-OP-2Ue" kind="relationship" relationship="viewControllers" id="WBE-nd-M9W"/>
                         <segue destination="sUe-yu-6zL" kind="relationship" relationship="viewControllers" id="eQh-6K-sVA"/>
                         <segue destination="X1V-LF-3Dx" kind="relationship" relationship="viewControllers" id="FPM-FD-aWH"/>
@@ -76,8 +77,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
+<<<<<<< HEAD
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="96" id="YdR-4x-ndy">
                                 <rect key="frame" x="0.0" y="55" width="320" height="96"/>
+=======
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="YQ5-xK-LjL">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+>>>>>>> FETCH_HEAD
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YdR-4x-ndy" id="hj3-cq-O7F">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="95"/>
@@ -369,7 +375,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-242"/>
         </scene>
-        <!--Balloon List Table View Controller - Balloons-->
+        <!--Balloon List Table View Controller-->
         <scene sceneID="dK2-vt-0Go">
             <objects>
                 <tableViewController id="sUe-yu-6zL" customClass="BalloonListTableViewController" sceneMemberID="viewController">
@@ -378,7 +384,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="HFl-SQ-nrZ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="balloonCell" id="HFl-SQ-nrZ">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HFl-SQ-nrZ" id="aVv-rZ-71a">
@@ -392,11 +398,30 @@
                             <outlet property="delegate" destination="sUe-yu-6zL" id="jaP-5R-8O4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Balloons" id="8Gz-w9-FdY"/>
+                    <navigationItem key="navigationItem" id="T3t-Jn-64F"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iz6-PX-FEK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="653" y="516"/>
+            <point key="canvasLocation" x="1178" y="552"/>
+        </scene>
+        <!--Navigation Controller - Balloons-->
+        <scene sceneID="Cbg-w4-Ylq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="2hk-i5-eay" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Balloons" id="8Gz-w9-FdY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DLe-Te-S1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sUe-yu-6zL" kind="relationship" relationship="rootViewController" id="XEQ-Hz-Qqy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GF8-BY-G2I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="652" y="552"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

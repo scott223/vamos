@@ -29,6 +29,18 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    // Check if user is cached and linked to Facebook, if so, bypass login
+
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if ([PFUser currentUser] && [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]]) {
+        
+        [self performSegueWithIdentifier:@"startSegue" sender:self];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning
