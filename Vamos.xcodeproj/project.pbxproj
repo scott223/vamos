@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D29007D1192524F50013A2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29007D0192524F50013A2B7 /* Foundation.framework */; };
+		D29007D3192524F50013A2B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29007D2192524F50013A2B7 /* CoreGraphics.framework */; };
+		D29007D5192524F50013A2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29007D4192524F50013A2B7 /* UIKit.framework */; };
+		D29007DB192524F50013A2B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29007D9192524F50013A2B7 /* InfoPlist.strings */; };
+		D29007DD192524F50013A2B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D29007DC192524F50013A2B7 /* main.m */; };
+		D29007E1192524F50013A2B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D29007E0192524F50013A2B7 /* AppDelegate.m */; };
+		D29007E4192524F50013A2B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D29007E2192524F50013A2B7 /* Main.storyboard */; };
+		D29007E7192524F50013A2B7 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29007E6192524F50013A2B7 /* FirstViewController.m */; };
+		D29007EA192524F50013A2B7 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D29007E9192524F50013A2B7 /* SecondViewController.m */; };
+		D29007EC192524F50013A2B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D29007EB192524F50013A2B7 /* Images.xcassets */; };
+		D29007F3192524F50013A2B7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29007F2192524F50013A2B7 /* XCTest.framework */; };
+		D29007F4192524F50013A2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29007D0192524F50013A2B7 /* Foundation.framework */; };
+		D29007F5192524F50013A2B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D29007D4192524F50013A2B7 /* UIKit.framework */; };
+		D29007FD192524F50013A2B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D29007FB192524F50013A2B7 /* InfoPlist.strings */; };
+		D29007FF192524F50013A2B7 /* VamosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D29007FE192524F50013A2B7 /* VamosTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D29007F6192524F50013A2B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D29007C5192524F50013A2B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D29007CC192524F50013A2B7;
+			remoteInfo = Vamos;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D29007CD192524F50013A2B7 /* Vamos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vamos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29007D0192524F50013A2B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D29007D2192524F50013A2B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D29007D4192524F50013A2B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D29007D8192524F50013A2B7 /* Vamos-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Vamos-Info.plist"; sourceTree = "<group>"; };
+		D29007DA192524F50013A2B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D29007DC192524F50013A2B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D29007DE192524F50013A2B7 /* Vamos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Vamos-Prefix.pch"; sourceTree = "<group>"; };
+		D29007DF192524F50013A2B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D29007E0192524F50013A2B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D29007E3192524F50013A2B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D29007E5192524F50013A2B7 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		D29007E6192524F50013A2B7 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		D29007E8192524F50013A2B7 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		D29007E9192524F50013A2B7 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		D29007EB192524F50013A2B7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D29007F1192524F50013A2B7 /* VamosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VamosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D29007F2192524F50013A2B7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D29007FA192524F50013A2B7 /* VamosTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VamosTests-Info.plist"; sourceTree = "<group>"; };
+		D29007FC192524F50013A2B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D29007FE192524F50013A2B7 /* VamosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VamosTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D29007CA192524F50013A2B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29007D3192524F50013A2B7 /* CoreGraphics.framework in Frameworks */,
+				D29007D5192524F50013A2B7 /* UIKit.framework in Frameworks */,
+				D29007D1192524F50013A2B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29007EE192524F50013A2B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29007F3192524F50013A2B7 /* XCTest.framework in Frameworks */,
+				D29007F5192524F50013A2B7 /* UIKit.framework in Frameworks */,
+				D29007F4192524F50013A2B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D29007C4192524F50013A2B7 = {
+			isa = PBXGroup;
+			children = (
+				D29007D6192524F50013A2B7 /* Vamos */,
+				D29007F8192524F50013A2B7 /* VamosTests */,
+				D29007CF192524F50013A2B7 /* Frameworks */,
+				D29007CE192524F50013A2B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D29007CE192524F50013A2B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D29007CD192524F50013A2B7 /* Vamos.app */,
+				D29007F1192524F50013A2B7 /* VamosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D29007CF192524F50013A2B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D29007D0192524F50013A2B7 /* Foundation.framework */,
+				D29007D2192524F50013A2B7 /* CoreGraphics.framework */,
+				D29007D4192524F50013A2B7 /* UIKit.framework */,
+				D29007F2192524F50013A2B7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D29007D6192524F50013A2B7 /* Vamos */ = {
+			isa = PBXGroup;
+			children = (
+				D29007DF192524F50013A2B7 /* AppDelegate.h */,
+				D29007E0192524F50013A2B7 /* AppDelegate.m */,
+				D29007E2192524F50013A2B7 /* Main.storyboard */,
+				D29007E5192524F50013A2B7 /* FirstViewController.h */,
+				D29007E6192524F50013A2B7 /* FirstViewController.m */,
+				D29007E8192524F50013A2B7 /* SecondViewController.h */,
+				D29007E9192524F50013A2B7 /* SecondViewController.m */,
+				D29007EB192524F50013A2B7 /* Images.xcassets */,
+				D29007D7192524F50013A2B7 /* Supporting Files */,
+			);
+			path = Vamos;
+			sourceTree = "<group>";
+		};
+		D29007D7192524F50013A2B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D29007D8192524F50013A2B7 /* Vamos-Info.plist */,
+				D29007D9192524F50013A2B7 /* InfoPlist.strings */,
+				D29007DC192524F50013A2B7 /* main.m */,
+				D29007DE192524F50013A2B7 /* Vamos-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D29007F8192524F50013A2B7 /* VamosTests */ = {
+			isa = PBXGroup;
+			children = (
+				D29007FE192524F50013A2B7 /* VamosTests.m */,
+				D29007F9192524F50013A2B7 /* Supporting Files */,
+			);
+			path = VamosTests;
+			sourceTree = "<group>";
+		};
+		D29007F9192524F50013A2B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D29007FA192524F50013A2B7 /* VamosTests-Info.plist */,
+				D29007FB192524F50013A2B7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D29007CC192524F50013A2B7 /* Vamos */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2900802192524F50013A2B7 /* Build configuration list for PBXNativeTarget "Vamos" */;
+			buildPhases = (
+				D29007C9192524F50013A2B7 /* Sources */,
+				D29007CA192524F50013A2B7 /* Frameworks */,
+				D29007CB192524F50013A2B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vamos;
+			productName = Vamos;
+			productReference = D29007CD192524F50013A2B7 /* Vamos.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D29007F0192524F50013A2B7 /* VamosTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D2900805192524F50013A2B7 /* Build configuration list for PBXNativeTarget "VamosTests" */;
+			buildPhases = (
+				D29007ED192524F50013A2B7 /* Sources */,
+				D29007EE192524F50013A2B7 /* Frameworks */,
+				D29007EF192524F50013A2B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D29007F7192524F50013A2B7 /* PBXTargetDependency */,
+			);
+			name = VamosTests;
+			productName = VamosTests;
+			productReference = D29007F1192524F50013A2B7 /* VamosTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D29007C5192524F50013A2B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Scott Brugmans";
+				TargetAttributes = {
+					D29007F0192524F50013A2B7 = {
+						TestTargetID = D29007CC192524F50013A2B7;
+					};
+				};
+			};
+			buildConfigurationList = D29007C8192524F50013A2B7 /* Build configuration list for PBXProject "Vamos" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D29007C4192524F50013A2B7;
+			productRefGroup = D29007CE192524F50013A2B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D29007CC192524F50013A2B7 /* Vamos */,
+				D29007F0192524F50013A2B7 /* VamosTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D29007CB192524F50013A2B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29007EC192524F50013A2B7 /* Images.xcassets in Resources */,
+				D29007DB192524F50013A2B7 /* InfoPlist.strings in Resources */,
+				D29007E4192524F50013A2B7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29007EF192524F50013A2B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29007FD192524F50013A2B7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D29007C9192524F50013A2B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29007EA192524F50013A2B7 /* SecondViewController.m in Sources */,
+				D29007E1192524F50013A2B7 /* AppDelegate.m in Sources */,
+				D29007E7192524F50013A2B7 /* FirstViewController.m in Sources */,
+				D29007DD192524F50013A2B7 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D29007ED192524F50013A2B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D29007FF192524F50013A2B7 /* VamosTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D29007F7192524F50013A2B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D29007CC192524F50013A2B7 /* Vamos */;
+			targetProxy = D29007F6192524F50013A2B7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D29007D9192524F50013A2B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29007DA192524F50013A2B7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D29007E2192524F50013A2B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29007E3192524F50013A2B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D29007FB192524F50013A2B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D29007FC192524F50013A2B7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D2900800192524F50013A2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D2900801192524F50013A2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D2900803192524F50013A2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Vamos/Vamos-Prefix.pch";
+				INFOPLIST_FILE = "Vamos/Vamos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D2900804192524F50013A2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Vamos/Vamos-Prefix.pch";
+				INFOPLIST_FILE = "Vamos/Vamos-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		D2900806192524F50013A2B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Vamos.app/Vamos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Vamos/Vamos-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VamosTests/VamosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D2900807192524F50013A2B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Vamos.app/Vamos";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Vamos/Vamos-Prefix.pch";
+				INFOPLIST_FILE = "VamosTests/VamosTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D29007C8192524F50013A2B7 /* Build configuration list for PBXProject "Vamos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2900800192524F50013A2B7 /* Debug */,
+				D2900801192524F50013A2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D2900802192524F50013A2B7 /* Build configuration list for PBXNativeTarget "Vamos" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2900803192524F50013A2B7 /* Debug */,
+				D2900804192524F50013A2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D2900805192524F50013A2B7 /* Build configuration list for PBXNativeTarget "VamosTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D2900806192524F50013A2B7 /* Debug */,
+				D2900807192524F50013A2B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D29007C5192524F50013A2B7 /* Project object */;
+}
