@@ -10,4 +10,11 @@
 
 @interface NewBalloonTableViewController : UITableViewController
 
+
+@property (weak, nonatomic) IBOutlet UITextField *textf;
+
+@property (weak, nonatomic) IBOutlet UILabel *lab;
+
+- (IBAction)sub:(id)sender;
+- (IBAction)returnkeyButton:(id)sender;
 @end

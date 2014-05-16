@@ -14,6 +14,8 @@
 
 @implementation NewBalloonTableViewController
 
+@synthesize lab, textf;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -38,6 +40,18 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)sub:(id)sender {
+  
+    NSString * input=textf.text;
+    
+    lab.text= input;
+
+}
+-(IBAction)returnkeyButton:(id)sender
+{
+    [sender resignFirstResponder];
 }
 
 #pragma mark - Table view data source
