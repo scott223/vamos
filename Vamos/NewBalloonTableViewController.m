@@ -14,7 +14,7 @@
 
 @implementation NewBalloonTableViewController
                                 
-@synthesize lab, textf;
+@synthesize lab, textf, invitedFriends;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -34,6 +34,20 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    if (self.friendPickerController == nil) {
+        // Create friend picker, and get data loaded into it.
+        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.title = @"Select Friends";
+        self.friendPickerController.delegate = self;
+    }
+    
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];
+    
+    invitedFriends = [[NSMutableArray alloc] init];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,8 +61,39 @@
     NSString * input=textf.text;
     
     lab.text= input;
+    
+}
+
+- (void) facebookViewControllerCancelWasPressed:(id)sender
+{
+    NSLog(@"Friend selection was cancelled");
+    [self handlePickerDone];
+    
+}
+
+- (void) facebookViewControllerDoneWasPressed:(id)sender
+{
+    
+    [invitedFriends removeAllObjects];
+    
+    for (id<FBGraphUser> user in self.friendPickerController.selection) {
+        
+        [invitedFriends addObject:user.id];
+        
+        NSLog(@"Friend selected: %@", user.id);
+    }
+    
+    [self handlePickerDone];
+}
+
+- (void) handlePickerDone
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 
 }
+
+
+
 -(IBAction)returnkeyButton:(id)sender
 {
     [sender resignFirstResponder];
@@ -127,4 +172,74 @@
     [searchBar resignFirstResponder];
 }
 */
+
+/* SB: FB friend picker search bar */
+
+- (void) handleSearch:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
+    self.searchText = searchBar.text;
+    [self.friendPickerController updateView];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar*)searchBar
+{
+    [self handleSearch:searchBar];
+}
+
+- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar {
+    self.searchText = nil;
+    [searchBar resignFirstResponder];
+}
+
+- (BOOL)friendPickerViewController:(FBFriendPickerViewController *)friendPicker
+                 shouldIncludeUser:(id<FBGraphUser>)user
+{
+    if (self.searchText && ![self.searchText isEqualToString:@""]) {
+        NSRange result = [user.name
+                          rangeOfString:self.searchText
+                          options:NSCaseInsensitiveSearch];
+        if (result.location != NSNotFound) {
+            return YES;
+        } else {
+            return NO;
+        }
+    } else {
+        return YES;
+    }
+    return YES;
+}
+
+- (void)addSearchBarToFriendPickerView
+{
+    if (self.searchBar == nil) {
+        CGFloat searchBarHeight = 44.0;
+        self.searchBar =
+        [[UISearchBar alloc]
+         initWithFrame:
+         CGRectMake(0,0,
+                    self.view.bounds.size.width,
+                    searchBarHeight)];
+        self.searchBar.autoresizingMask = self.searchBar.autoresizingMask |
+        UIViewAutoresizingFlexibleWidth;
+        self.searchBar.delegate = self;
+        self.searchBar.showsCancelButton = YES;
+        
+        [self.friendPickerController.canvasView addSubview:self.searchBar];
+        CGRect newFrame = self.friendPickerController.view.bounds;
+        newFrame.size.height -= searchBarHeight;
+        newFrame.origin.y = searchBarHeight;
+        self.friendPickerController.tableView.frame = newFrame;
+    }
+}
+
+- (IBAction)laatOp:(id)sender {
+    if (!FBSession.activeSession.isOpen) {
+        NSLog(@"no session!");
+    }
+    
+    
+    [self presentViewController:self.friendPickerController animated:YES completion:^(void){[self addSearchBarToFriendPickerView];}];
+    
+
+}
 @end

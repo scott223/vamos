@@ -33,6 +33,9 @@
     [defaultACL setPublicReadAccess:YES];
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
     
+    
+    //[PFUser logOut];
+    
     //PFUser *currentUser = [PFUser currentUser];
     
     return YES;

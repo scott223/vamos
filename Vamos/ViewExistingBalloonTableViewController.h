@@ -9,12 +9,16 @@
 #import <UIKit/UIKit.h>
 #import "Parse/Parse.h"
 
-@interface ViewExistingBalloonTableViewController : UITableViewController {
+
+
+@interface ViewExistingBalloonTableViewController : UITableViewController<FBFriendPickerDelegate>
+{
     PFObject *balloon;
 }
 - (IBAction)buttonCancel:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelWhat;
 @property (strong, nonatomic) PFObject *balloon;
+
 
 @end
