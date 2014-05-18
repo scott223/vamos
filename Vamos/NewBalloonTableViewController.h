@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewBalloonTableViewController : UITableViewController
-
+@interface NewBalloonTableViewController : UITableViewController 
+-(IBAction)start:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *textf;
 
@@ -17,4 +17,5 @@
 
 - (IBAction)sub:(id)sender;
 - (IBAction)returnkeyButton:(id)sender;
+
 @end

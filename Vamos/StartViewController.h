@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface StartViewController : UIViewController
+@interface StartViewController : UIViewController 
 - (IBAction)startSegue:(id)sender;
 
 @end
