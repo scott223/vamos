@@ -78,7 +78,7 @@
         
     } else {
         
-        NSArray *permissionsArray = @[ @"user_about_me", @"user_relationships", @"user_birthday", @"user_location", @"user_friends"];
+        NSArray *permissionsArray = @[ @"user_about_me", @"user_friends", @"read_friendlists"];
         
         // Login PFUser using facebook
         [PFFacebookUtils logInWithPermissions:permissionsArray block:^(PFUser *user, NSError *error) {

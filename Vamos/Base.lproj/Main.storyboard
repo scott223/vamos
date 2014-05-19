@@ -190,7 +190,7 @@
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
-                                                        <action selector="laatOp:" destination="68i-OP-2Ue" eventType="touchUpInside" id="mZV-w3-40d"/>
+                                                        <action selector="laatOp:" destination="68i-OP-2Ue" eventType="touchUpInside" id="sl9-HK-QsI"/>
                                                     </connections>
                                                 </button>
                                             </subviews>

@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "FacebookSDK/FacebookSDK.h"
+#import "KNMultiItemSelector.h";
 
-@interface NewBalloonTableViewController : UITableViewController <FBFriendPickerDelegate>
+@interface NewBalloonTableViewController : UITableViewController <KNMultiItemSelectorDelegate>{
+      NSMutableArray * friends;
+}
 -(IBAction)start:(id)sender;
-
 - (IBAction)laatOp:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UITextField *textf;
 
 @property (weak, nonatomic) IBOutlet UILabel *lab;
@@ -20,7 +23,6 @@
 - (IBAction)sub:(id)sender;
 - (IBAction)returnkeyButton:(id)sender;
 
-@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 @property (retain, nonatomic) UISearchBar *searchBar;
 @property (retain, nonatomic) NSString *searchText;
 @property (retain, nonatomic) NSMutableArray *invitedFriends;

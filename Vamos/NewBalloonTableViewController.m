@@ -7,6 +7,7 @@
 //
 
 #import "NewBalloonTableViewController.h"
+#import "KNMultiItemSelector.h";
 
 @interface NewBalloonTableViewController ()
 
@@ -35,16 +36,26 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    friends = [NSMutableArray array];
     
-    if (self.friendPickerController == nil) {
-        // Create friend picker, and get data loaded into it.
-        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
-        self.friendPickerController.title = @"Select Friends";
-        self.friendPickerController.delegate = self;
-    }
-    
-    [self.friendPickerController loadData];
-    [self.friendPickerController clearSelection];
+    [FBRequestConnection startWithGraphPath:@"me?fields=friends"
+                          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                              if (!error) {
+                                  NSDictionary * rawObject = result;
+                                  NSDictionary * friendsArray = [rawObject objectForKey:@"friends"];
+                                  NSArray * dataArray = [friendsArray objectForKey:@"data"];
+                                  for (NSDictionary * f in dataArray) {
+                                      NSLog(@"hey");
+                                      [friends addObject:[[KNSelectorItem alloc] initWithDisplayValue:[f objectForKey:@"name"]
+                                                                                          selectValue:[f objectForKey:@"id"]
+                                                                                             imageUrl:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", [f objectForKey:@"id"]]]];
+                                  }
+                                  [friends sortUsingSelector:@selector(compareByDisplayValue:)];
+                              } else {
+                                  // An error occurred, we need to handle the error
+                                  // See: https://developers.facebook.com/docs/ios/errors   
+                              }
+                          }];
     
     invitedFriends = [[NSMutableArray alloc] init];
 
@@ -62,34 +73,6 @@
     
     lab.text= input;
     
-}
-
-- (void) facebookViewControllerCancelWasPressed:(id)sender
-{
-    NSLog(@"Friend selection was cancelled");
-    [self handlePickerDone];
-    
-}
-
-- (void) facebookViewControllerDoneWasPressed:(id)sender
-{
-    
-    [invitedFriends removeAllObjects];
-    
-    for (id<FBGraphUser> user in self.friendPickerController.selection) {
-        
-        [invitedFriends addObject:user.id];
-        
-        NSLog(@"Friend selected: %@", user.id);
-    }
-    
-    [self handlePickerDone];
-}
-
-- (void) handlePickerDone
-{
-    [self dismissViewControllerAnimated:YES completion:NULL];
-
 }
 
 
@@ -173,73 +156,42 @@
 }
 */
 
-/* SB: FB friend picker search bar */
-
-- (void) handleSearch:(UISearchBar *)searchBar {
-    [searchBar resignFirstResponder];
-    self.searchText = searchBar.text;
-    [self.friendPickerController updateView];
-}
-
-- (void)searchBarSearchButtonClicked:(UISearchBar*)searchBar
-{
-    [self handleSearch:searchBar];
-}
-
-- (void)searchBarCancelButtonClicked:(UISearchBar *) searchBar {
-    self.searchText = nil;
-    [searchBar resignFirstResponder];
-}
-
-- (BOOL)friendPickerViewController:(FBFriendPickerViewController *)friendPicker
-                 shouldIncludeUser:(id<FBGraphUser>)user
-{
-    if (self.searchText && ![self.searchText isEqualToString:@""]) {
-        NSRange result = [user.name
-                          rangeOfString:self.searchText
-                          options:NSCaseInsensitiveSearch];
-        if (result.location != NSNotFound) {
-            return YES;
-        } else {
-            return NO;
-        }
-    } else {
-        return YES;
-    }
-    return YES;
-}
-
-- (void)addSearchBarToFriendPickerView
-{
-    if (self.searchBar == nil) {
-        CGFloat searchBarHeight = 44.0;
-        self.searchBar =
-        [[UISearchBar alloc]
-         initWithFrame:
-         CGRectMake(0,0,
-                    self.view.bounds.size.width,
-                    searchBarHeight)];
-        self.searchBar.autoresizingMask = self.searchBar.autoresizingMask |
-        UIViewAutoresizingFlexibleWidth;
-        self.searchBar.delegate = self;
-        self.searchBar.showsCancelButton = YES;
-        
-        [self.friendPickerController.canvasView addSubview:self.searchBar];
-        CGRect newFrame = self.friendPickerController.view.bounds;
-        newFrame.size.height -= searchBarHeight;
-        newFrame.origin.y = searchBarHeight;
-        self.friendPickerController.tableView.frame = newFrame;
-    }
-}
-
 - (IBAction)laatOp:(id)sender {
-    if (!FBSession.activeSession.isOpen) {
-        NSLog(@"no session!");
+    KNMultiItemSelector * selector = [[KNMultiItemSelector alloc] initWithItems:friends
+                                                               preselectedItems:nil
+                                                                          title:@"Select friends"
+                                                                placeholderText:@"Search by name"
+                                                                       delegate:self];
+    
+    selector.allowSearchControl = YES;
+    selector.useTableIndex      = YES;
+    selector.useRecentItems     = YES;
+    selector.maxNumberOfRecentItems = 8;
+    
+    [self.navigationController pushViewController:selector animated:YES];
+}
+
+#pragma mark - Handle delegate callback
+
+-(void)selectorDidCancelSelection {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)selector:(KNMultiItemSelector *)selector didFinishSelectionWithItems:(NSArray *)selectedItems {
+    /*[self dismissModalViewControllerAnimated:YES];
+    if (self.popoverController) {
+        [self.popoverController dismissPopoverAnimated:YES];
+        self.popoverController = nil;
+    }}*/
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    NSString *tekst = selectedItems.count ? @"You have selected:\n" : @"You have not selected any friend";
+    for (KNSelectorItem * i in selectedItems) {
+        tekst = [tekst stringByAppendingFormat:@"%@ - %@\n", i.selectValue, i.displayValue];
+    
     }
     
-    
-    [self presentViewController:self.friendPickerController animated:YES completion:^(void){[self addSearchBarToFriendPickerView];}];
-    
-
+    NSLog(@"%@",tekst);
 }
 @end
