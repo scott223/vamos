@@ -109,7 +109,6 @@
 */
 
 - (IBAction)buttonCancel:(id)sender {
-    [self dismissViewControllerAnimated:YES
-                             completion:nil];
+    [self.delegate ViewExistingBalloonTableViewControllerDidCancel:self];
 }
 @end

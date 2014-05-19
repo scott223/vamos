@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ViewExistingBalloonTableViewController.h"
 
-@interface BalloonListTableViewController : UITableViewController {
+@interface BalloonListTableViewController : UITableViewController< ViewExistingBalloonTableViewControllerDelegate>{
     NSMutableArray *balloonList;
 }
 

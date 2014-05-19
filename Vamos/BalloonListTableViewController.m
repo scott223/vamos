@@ -173,6 +173,7 @@
 {
 
     ViewExistingBalloonTableViewController *view = segue.destinationViewController;
+    view.delegate = self;
     
  NSLog(@"prepareForSegue: %@", segue.identifier);
  if([segue.identifier isEqualToString:@"showExisting"])
@@ -183,6 +184,10 @@
  }else if([segue.identifier isEqualToString:@"johnSegue"]){
  
  }
+}
+
+-(void) ViewExistingBalloonTableViewControllerDidCancel:(ViewExistingBalloonTableViewController *)controller{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 
