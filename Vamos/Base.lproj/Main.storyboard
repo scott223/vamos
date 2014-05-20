@@ -223,11 +223,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cd0-H8-1Hh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c1V-qT-na3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3le-e4-vvx">
-                                <rect key="frame" x="0.0" y="67" width="320" height="457"/>
+                                <rect key="frame" x="0.0" y="67" width="320" height="369"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-Ed-0R3">
@@ -292,7 +292,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="UCw-xq-5Xo"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="320" height="640"/>
                     <connections>
                         <outlet property="aantal" destination="c70-4V-HEM" id="aWP-yZ-1xh"/>
@@ -301,14 +300,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gc7-cq-4Db" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1178" y="1245"/>
+            <point key="canvasLocation" x="1237" y="1355"/>
         </scene>
         <!--Balloon List Table View Controller-->
         <scene sceneID="dK2-vt-0Go">
             <objects>
                 <tableViewController id="sUe-yu-6zL" customClass="BalloonListTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vc6-Lb-r9K">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -340,7 +339,7 @@
             <objects>
                 <tableViewController id="vJq-Nn-i6c" customClass="ViewExistingBalloonTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="eFx-JO-M5C">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XSe-Ak-DFm">
