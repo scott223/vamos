@@ -7,6 +7,9 @@
 //
 
 #import "AnimatieControllerViewController.h"
+#import "FacebookSDK/FacebookSDK.h"
+#import "KNMultiItemSelector.h"
+#import "Parse/Parse.h"
 
 @interface AnimatieControllerViewController ()
 
@@ -14,6 +17,11 @@
 
 @implementation AnimatieControllerViewController
 
+<<<<<<< HEAD
+=======
+@synthesize invitedFriends, selector, textFieldWho, textFieldWhat;
+
+>>>>>>> FETCH_HEAD
 - (void)viewDidLoad
 
 {
@@ -48,10 +56,59 @@
     [animation setAnimationRepeatCount:1];
     [animation setAnimationDuration : 4];
     animation.image = [UIImage imageNamed:@"A23.png"];
-    [animation startAnimating];
     
+    friends = [NSMutableArray array];
+    
+    if ([friends count] == 0) {
+    
+    [FBRequestConnection startWithGraphPath:@"me?fields=friends"
+                          completionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+                              if (!error) {
+                                  NSDictionary * rawObject = result;
+                                  NSDictionary * friendsArray = [rawObject objectForKey:@"friends"];
+                                  NSArray * dataArray = [friendsArray objectForKey:@"data"];
+                                  for (NSDictionary * f in dataArray) {
+                                      NSLog(@"hey");
+                                      [friends addObject:[[KNSelectorItem alloc] initWithDisplayValue:[f objectForKey:@"name"]
+                                                                                          selectValue:[f objectForKey:@"id"]
+                                                                                             imageUrl:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", [f objectForKey:@"id"]]]];
+                                  }
+                                  [friends sortUsingSelector:@selector(compareByDisplayValue:)];
+                                  
+                                  KNMultiItemSelector * _selector = [[KNMultiItemSelector alloc] initWithItems:friends
+                                                                                             preselectedItems:nil
+                                                                                                        title:@"Select friends"
+                                                                                              placeholderText:@"Search by name"
+                                                                                                     delegate:self];
+                                  
+                                  _selector.allowSearchControl = YES;
+                                  _selector.useTableIndex      = YES;
+                                  _selector.useRecentItems     = YES;
+                                  _selector.maxNumberOfRecentItems = 8;
+                                  
+                                  selector = _selector;
+
+                              } else {
+                                  // An error occurred, we need to handle the error
+                                  // See: https://developers.facebook.com/docs/ios/errors
+                              }
+                          }];
+        
+    }
+    
+    invitedFriends = [[NSMutableArray alloc] init];
+
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    textFieldWhat.delegate = self;
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,15 +131,75 @@
 
 - (IBAction)Vamos:(id)sender {
     
+<<<<<<< HEAD
    NSURL *SoundURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test" ofType:@"wav"]];
     
    AudioServicesCreateSystemSoundID((__bridge CFURLRef)SoundURL, &PlaySoundID);
 
     AudioServicesPlaySystemSound(PlaySoundID);
 
+=======
+    [animation startAnimating];
+    
+    selector = [[KNMultiItemSelector alloc] initWithItems:friends
+                              preselectedItems:nil
+                                         title:@"Select friends"
+                               placeholderText:@"Search by name"
+                                      delegate:self];
+    PFObject *balloon = [PFObject objectWithClassName:@"Balloon"];
+    [balloon setObject:[textFieldWhat text] forKey:@"what"];
+    [balloon setObject:[PFUser currentUser] forKey:@"boss"];
+    [balloon setObject:[[PFUser currentUser] objectForKey:@"fb_id"] forKey:@"boss_fb_id"];
+    [balloon setObject:invitedFriends forKey:@"invitedFriends"];
+    
+    [balloon saveInBackground];
+    
+    
+
+    
+>>>>>>> FETCH_HEAD
 }
 
 
 - (IBAction)buttonWhoPressed:(id)sender {
+    
+    
+    [self.navigationController pushViewController:selector animated:YES];
+
 }
+
+#pragma mark - Handle delegate callback
+
+-(void)selectorDidCancelSelection {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)selector:(KNMultiItemSelector *)selector didFinishSelectionWithItems:(NSArray *)selectedItems {
+    /*[self dismissModalViewControllerAnimated:YES];
+     if (self.popoverController) {
+     [self.popoverController dismissPopoverAnimated:YES];
+     self.popoverController = nil;
+     }}*/
+    
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    NSString *tekst = selectedItems.count ? @"" : @"None";
+    int count = 0;
+    [invitedFriends removeAllObjects];
+    for (KNSelectorItem * i in selectedItems) {
+        count++;
+        NSArray *name = [[NSArray alloc] init];
+        name = [i.displayValue componentsSeparatedByString:@" "];
+        tekst = [tekst stringByAppendingFormat:@"%@", [name objectAtIndex:0]];
+        if ([selectedItems count] > count) {
+            [tekst stringByAppendingString:@", "];
+        }
+        [invitedFriends addObject:i.selectValue];
+        
+    }
+    
+    [textFieldWho setText:tekst];
+    
+}
+
 @end
