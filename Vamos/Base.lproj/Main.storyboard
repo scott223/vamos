@@ -182,7 +182,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="USW-fl-nwF">
-                                                    <rect key="frame" x="132" y="20" width="56" height="30"/>
+                                                    <rect key="frame" x="125" y="27" width="56" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Laat op!">
                                                         <color key="titleColor" red="0.83829398777173914" green="0.059506205948514676" blue="0.061320639374791271" alpha="1" colorSpace="calibratedRGB"/>
@@ -227,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3le-e4-vvx">
-                                <rect key="frame" x="0.0" y="67" width="320" height="454"/>
+                                <rect key="frame" x="0.0" y="67" width="320" height="457"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJK-Ed-0R3">
@@ -264,6 +264,28 @@
                                     <segue destination="sUe-yu-6zL" kind="push" id="ull-nU-Y86"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7v-Ko-vye">
+                                <rect key="frame" x="121" y="429" width="79" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Vamos!">
+                                    <color key="titleColor" red="0.97254908080000002" green="0.23921570180000001" blue="0.039215687659999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Vamos:" destination="KHZ-MB-6g1" eventType="touchUpInside" id="WBa-ED-KCL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqt-AD-P7C">
+                                <rect key="frame" x="242" y="349" width="58" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="?">
+                                    <color key="titleColor" red="0.97254908080000002" green="0.23921570180000001" blue="0.039215687659999998" alpha="1" colorSpace="deviceRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonWhoPressed:" destination="KHZ-MB-6g1" eventType="touchUpInside" id="A7T-E5-iI7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.23723166804564436" green="0.8086322020823844" blue="0.83829398777173914" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -273,6 +295,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="320" height="640"/>
                     <connections>
+                        <outlet property="aantal" destination="c70-4V-HEM" id="aWP-yZ-1xh"/>
                         <outlet property="animation" destination="3le-e4-vvx" id="ACg-lk-M7l"/>
                     </connections>
                 </viewController>

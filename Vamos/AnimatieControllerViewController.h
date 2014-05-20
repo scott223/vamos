@@ -14,5 +14,9 @@
     SystemSoundID PlaySoundID;
 }
 -(IBAction)PlayAudio:(id)sender;
+- (IBAction)Vamos:(id)sender;
+- (IBAction)buttonWhoPressed:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UITextField *aantal;
 
 @end

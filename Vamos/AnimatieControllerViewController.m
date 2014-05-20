@@ -69,4 +69,13 @@
 }
 */
 
+
+- (IBAction)Vamos:(id)sender {
+}
+
+- (IBAction)buttonPressed:(id)sender {
+}
+
+- (IBAction)buttonWhoPressed:(id)sender {
+}
 @end
