@@ -14,11 +14,13 @@
 
 @implementation AnimatieControllerViewController
 
-
-
 - (void)viewDidLoad
 
 {
+   
+    
+    
+    
     animation.animationImages = [NSArray arrayWithObjects:
                                  [UIImage imageNamed:@"A1.png"],
                                  [UIImage imageNamed:@"A2.png"],
@@ -71,10 +73,15 @@
 
 
 - (IBAction)Vamos:(id)sender {
+    
+   NSURL *SoundURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Test" ofType:@"wav"]];
+    
+   AudioServicesCreateSystemSoundID((__bridge CFURLRef)SoundURL, &PlaySoundID);
+
+    AudioServicesPlaySystemSound(PlaySoundID);
+
 }
 
-- (IBAction)buttonPressed:(id)sender {
-}
 
 - (IBAction)buttonWhoPressed:(id)sender {
 }

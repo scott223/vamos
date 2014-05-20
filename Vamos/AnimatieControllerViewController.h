@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import <AudioToolbox/AudioToolbox.h>
+
 @interface AnimatieControllerViewController : UIViewController {
     IBOutlet UIImageView *animation;
     
     SystemSoundID PlaySoundID;
 }
--(IBAction)PlayAudio:(id)sender;
+-(IBAction)PlayAudioButton:(id)sender;
+
 - (IBAction)Vamos:(id)sender;
+
 - (IBAction)buttonWhoPressed:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UITextField *aantal;
