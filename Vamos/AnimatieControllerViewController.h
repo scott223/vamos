@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import <AudioToolbox/AudioToolbox.h>
 @interface AnimatieControllerViewController : UIViewController {
     IBOutlet UIImageView *animation;
     
+    SystemSoundID PlaySoundID;
 }
-
+-(IBAction)PlayAudio:(id)sender;
 
 @end

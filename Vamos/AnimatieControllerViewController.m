@@ -20,29 +20,34 @@
 
 {
     animation.animationImages = [NSArray arrayWithObjects:
-                                 [UIImage imageNamed:@"animatie1.png"],
-                                 [UIImage imageNamed:@"animatie2.png"],
-                                 [UIImage imageNamed:@"animatie3.png"],
-                                 [UIImage imageNamed:@"animatie4.png"],
-                                 [UIImage imageNamed:@"animatie5.png"],
-                                 [UIImage imageNamed:@"animatie6.png"],
-                                 [UIImage imageNamed:@"animatie7.png"],
-                                 [UIImage imageNamed:@"animatie8.png"],
-                                 [UIImage imageNamed:@"animatie9.png"],
-                                 [UIImage imageNamed:@"animatie10.png"],
-                                 [UIImage imageNamed:@"animatie11.png"],
-                                 [UIImage imageNamed:@"animatie12.png"],
-                                 [UIImage imageNamed:@"animatie13.png"],
-                                 [UIImage imageNamed:@"animatie12.png"],
-                                 [UIImage imageNamed:@"animatie11.png"],
-                                 [UIImage imageNamed:@"animatie13.png"],
-                                 [UIImage imageNamed:@"animatie11.png"],
-                                 [UIImage imageNamed:@"animatie13.png"],nil];
+                                 [UIImage imageNamed:@"A1.png"],
+                                 [UIImage imageNamed:@"A2.png"],
+                                 [UIImage imageNamed:@"A3.png"],
+                                 [UIImage imageNamed:@"A4.png"],
+                                 [UIImage imageNamed:@"A5.png"],
+                                 [UIImage imageNamed:@"A6.png"],
+                                 [UIImage imageNamed:@"A7.png"],
+                                 [UIImage imageNamed:@"A8.png"],
+                                 [UIImage imageNamed:@"A9.png"],
+                                 [UIImage imageNamed:@"A10.png"],
+                                 [UIImage imageNamed:@"A11.png"],
+                                 [UIImage imageNamed:@"A12.png"],
+                                 [UIImage imageNamed:@"A13.png"],
+                                 [UIImage imageNamed:@"A14.png"],
+                                 [UIImage imageNamed:@"A15.png"],
+                                 [UIImage imageNamed:@"A16.png"],
+                                 [UIImage imageNamed:@"A17.png"],
+                                 [UIImage imageNamed:@"A18.png"],
+                                 [UIImage imageNamed:@"A19.png"],
+                                 [UIImage imageNamed:@"A20.png"],
+                                 [UIImage imageNamed:@"A21.png"],
+                                 [UIImage imageNamed:@"A22.png"],
+                                 [UIImage imageNamed:@"A23.png"],nil];
     [animation setAnimationRepeatCount:1];
-    [animation setAnimationDuration : 10];
+    [animation setAnimationDuration : 4];
+    animation.image = [UIImage imageNamed:@"A23.png"];
     [animation startAnimating];
-    /*[animation performSelector:@selector(setImage:) withObject:@"animatie13.png" afterDelay:[animation animationDuration]];
-    */
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

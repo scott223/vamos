@@ -67,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C7BC2B1192BC079009C7EE9 /* Electric Fly By 02.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Electric Fly By 02.caf"; sourceTree = "<group>"; };
 		0C84DC241925618800FB5D7F /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
 		0C84DC251925618800FB5D7F /* CustomButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
 		0CDB53E7192651BA002A2E02 /* AnimatieControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatieControllerViewController.h; sourceTree = "<group>"; };
@@ -298,6 +299,7 @@
 		D21421C31925278400C7CF21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C7BC2B1192BC079009C7EE9 /* Electric Fly By 02.caf */,
 				D21421C41925278400C7CF21 /* Vamos-Info.plist */,
 				D21421C51925278400C7CF21 /* InfoPlist.strings */,
 				D21421C81925278400C7CF21 /* main.m */,
