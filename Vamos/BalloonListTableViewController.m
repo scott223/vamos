@@ -32,7 +32,18 @@
 
 - (void)updateBalloons
 {
-    PFQuery *query = [PFQuery queryWithClassName:@"Balloon"];
+    
+    NSLog(@"updating balloons");
+    
+    PFQuery *boss = [PFQuery queryWithClassName:@"Balloon"];
+    [boss whereKey:@"boss" equalTo:[PFUser currentUser]];
+    
+    PFQuery *invited = [PFQuery queryWithClassName:@"Balloon"];
+    [invited whereKey:@"invitedFriends" equalTo:[[PFUser currentUser] objectForKey:@"fb_id"]];
+    
+    PFQuery *query = [PFQuery orQueryWithSubqueries:@[boss,invited]];
+    [query includeKey:@"boss"];
+
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         if (!error) {
             // The find succeeded.

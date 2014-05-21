@@ -40,7 +40,6 @@
 		D21421E91925278400C7CF21 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D21421E71925278400C7CF21 /* InfoPlist.strings */; };
 		D21421EB1925278400C7CF21 /* VamosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D21421EA1925278400C7CF21 /* VamosTests.m */; };
 		D21421F6192527A200C7CF21 /* BalloonListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21421F5192527A200C7CF21 /* BalloonListTableViewController.m */; };
-		D21421F91925283D00C7CF21 /* NewBalloonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21421F81925283D00C7CF21 /* NewBalloonTableViewController.m */; };
 		D21421FF19252D2B00C7CF21 /* MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21421FE19252D2B00C7CF21 /* MainTabBarController.m */; };
 		D214220119252F8C00C7CF21 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D214220019252F8C00C7CF21 /* Parse.framework */; };
 		D214220B1925306C00C7CF21 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21422021925306C00C7CF21 /* AudioToolbox.framework */; };
@@ -122,8 +121,6 @@
 		D21421EA1925278400C7CF21 /* VamosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VamosTests.m; sourceTree = "<group>"; };
 		D21421F4192527A200C7CF21 /* BalloonListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalloonListTableViewController.h; sourceTree = "<group>"; };
 		D21421F5192527A200C7CF21 /* BalloonListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalloonListTableViewController.m; sourceTree = "<group>"; };
-		D21421F71925283D00C7CF21 /* NewBalloonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewBalloonTableViewController.h; sourceTree = "<group>"; };
-		D21421F81925283D00C7CF21 /* NewBalloonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewBalloonTableViewController.m; sourceTree = "<group>"; };
 		D21421FD19252D2B00C7CF21 /* MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainTabBarController.h; sourceTree = "<group>"; };
 		D21421FE19252D2B00C7CF21 /* MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarController.m; sourceTree = "<group>"; };
 		D214220019252F8C00C7CF21 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -275,6 +272,8 @@
 		D21421C21925278400C7CF21 /* Vamos */ = {
 			isa = PBXGroup;
 			children = (
+				D21421C31925278400C7CF21 /* Supporting Files */,
+				D21421D71925278400C7CF21 /* Images.xcassets */,
 				D21421CB1925278400C7CF21 /* AppDelegate.h */,
 				D21421CC1925278400C7CF21 /* AppDelegate.m */,
 				D21421CE1925278400C7CF21 /* Main.storyboard */,
@@ -288,10 +287,6 @@
 				D21421F5192527A200C7CF21 /* BalloonListTableViewController.m */,
 				D2AED2071925780900713526 /* ViewExistingBalloonTableViewController.h */,
 				D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */,
-				D21421F71925283D00C7CF21 /* NewBalloonTableViewController.h */,
-				D21421F81925283D00C7CF21 /* NewBalloonTableViewController.m */,
-				D21421D71925278400C7CF21 /* Images.xcassets */,
-				D21421C31925278400C7CF21 /* Supporting Files */,
 				0CDB53E7192651BA002A2E02 /* AnimatieControllerViewController.h */,
 				0CDB53E8192651BA002A2E02 /* AnimatieControllerViewController.m */,
 			);
@@ -443,7 +438,6 @@
 				0C84DC261925618800FB5D7F /* CustomButton.m in Sources */,
 				D20F4567192A9CFC0015AA1F /* KNMultiItemSelector.m in Sources */,
 				D21422181925545300C7CF21 /* StartViewController.m in Sources */,
-				D21421F91925283D00C7CF21 /* NewBalloonTableViewController.m in Sources */,
 				D20F456A192A9CFC0015AA1F /* SDImageCache.m in Sources */,
 				D21421C91925278400C7CF21 /* main.m in Sources */,
 				D20F4568192A9CFC0015AA1F /* KNSelectorItem.m in Sources */,

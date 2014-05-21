@@ -14,7 +14,7 @@
 
 @implementation ViewExistingBalloonTableViewController
 
-@synthesize balloon, labelWhat;
+@synthesize balloon, labelWhat, labelWhen, labelWhere, imageBoss, labelBoss, labelWho, buttonJoin;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -37,6 +37,53 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     [labelWhat setText:[balloon valueForKey:@"what"]];
+    [labelWhere setText:[balloon valueForKey:@"where"]];
+    [labelWhen setText:[balloon valueForKey:@"when"]];
+    [labelWho setText:@"Loading..."];
+    
+    NSLog(@" cur user:%@ and balloon user: %@",[[PFUser currentUser] valueForKey:@"fb_id"],[balloon valueForKey:@"boss_fb_id"]);
+    
+    if ([[balloon valueForKey:@"boss_fb_id"] isEqualToString:[[PFUser currentUser] valueForKey:@"fb_id"]]) {
+        [buttonJoin setHidden:YES];
+        NSLog(@"wha");
+    }
+    
+    NSString *url = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", [balloon objectForKey:@"boss_fb_id"]];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    UIImage *profilePic = [UIImage imageWithData:imageData];
+    
+    [imageBoss setImage:profilePic];
+    [labelBoss setText:[[balloon valueForKey:@"boss"] valueForKey:@"full_name"]];
+    
+    PFQuery *invites = [PFUser query];
+    [invites whereKey:@"fb_id" containedIn:[balloon objectForKey:@"invitedFriends"]];
+    
+    [invites findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d friends.", objects.count);
+            NSInteger count = 0;
+            NSString * tekst = [[NSString alloc] init];
+            for (PFObject * obj in objects) {
+                
+                count++;
+                NSArray *name = [[NSArray alloc] init];
+                name = [[obj objectForKey:@"full_name"] componentsSeparatedByString:@" "];
+                tekst = [tekst stringByAppendingFormat:@"%@", [name objectAtIndex:0]];
+                if ([objects count] > count) {
+                    [tekst stringByAppendingString:@", "];
+                }
+                
+            }
+            
+            [labelWho setText:tekst];
+            
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
     
 }
 
@@ -108,7 +155,19 @@
 }
 */
 
-- (IBAction)buttonCancel:(id)sender {
-    [self.delegate ViewExistingBalloonTableViewControllerDidCancel:self];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 1) {
+        
+        
+        
+    }
+}
+- (IBAction)buttonJoinPressed:(id)sender {
+    
+    NSMutableArray *responses = [balloon objectForKey:@"responses"];
+    [responses addObject:@"lala"];
+    [balloon setObject:responses forKey:@"responses"];
+    [balloon saveInBackground];
 }
 @end

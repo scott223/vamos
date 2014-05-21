@@ -21,12 +21,18 @@
 {
     PFObject *balloon;
 }
-- (IBAction)buttonCancel:(id)sender;
 
 @property (nonatomic, weak) id <ViewExistingBalloonTableViewControllerDelegate> delegate;
 
 @property (weak, nonatomic) IBOutlet UILabel *labelWhat;
+@property (weak, nonatomic) IBOutlet UILabel *labelWhen;
+@property (weak, nonatomic) IBOutlet UILabel *labelWhere;
+@property (weak, nonatomic) IBOutlet UILabel *labelBoss;
+@property (weak, nonatomic) IBOutlet UILabel *labelWho;
+@property (weak, nonatomic) IBOutlet UIImageView *imageBoss;
+@property (weak, nonatomic) IBOutlet UIButton *buttonJoin;
 @property (strong, nonatomic) PFObject *balloon;
 
+- (IBAction)buttonJoinPressed:(id)sender;
 
 @end

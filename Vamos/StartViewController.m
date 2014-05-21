@@ -116,6 +116,7 @@
                         
                         if (userData[@"name"]) {
                             userProfile[@"name"] = userData[@"name"];
+                            
                         }
                         
                         if (userData[@"location"][@"name"]) {
@@ -140,6 +141,7 @@
                         
                         [[PFUser currentUser] setObject:userProfile forKey:@"profile"];
                         [[PFUser currentUser] setValue:facebookID forKey:@"fb_id"];
+                        [[PFUser currentUser] setValue:[userData objectForKey:@"name"] forKey:@"full_name"];
                         [[PFUser currentUser] saveInBackground];
                         
                         NSLog(@"New user data added");
