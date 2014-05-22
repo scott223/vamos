@@ -65,7 +65,7 @@
                                       NSDictionary * friendsArray = [rawObject objectForKey:@"friends"];
                                       NSArray * dataArray = [friendsArray objectForKey:@"data"];
                                       for (NSDictionary * f in dataArray) {
-                                          [friends addObject:[[KNSelectorItem alloc] initWithDisplayValue:[f objectForKey:@"name"]
+                                            [friends addObject:[[KNSelectorItem alloc] initWithDisplayValue:[f objectForKey:@"name"]
                                                                                               selectValue:[f objectForKey:@"id"]
                                                                                                  imageUrl:[NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", [f objectForKey:@"id"]]]];
                                       }
@@ -96,6 +96,12 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSURL *SoundURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:@"Fluitje" ofType:@"mp3"]];
+    
+    AudioServicesCreateSystemSoundID((__bridge CFURLRef)SoundURL, &PlaySoundID);
+    
+   
     
     textFieldWhat.delegate = self;
     textFieldWhere.delegate = self;
@@ -129,13 +135,14 @@
 
 - (IBAction)buttonVamosPressed:(id)sender {
     
+    
 
     if ([[textFieldWhat text] length] >= 3) {
         if ([[textFieldWhere text] length] >= 3) {
-            if ([[textFieldWhen text] length] >= 3) {
+            if ([[textFieldWhen text] length] >= 2) {
                 if ([invitedFriends count] > 0) {
+     
                     
-                    [animation startAnimating];
                     
                     selector = [[KNMultiItemSelector alloc] initWithItems:friends
                                                          preselectedItems:nil
@@ -152,7 +159,11 @@
                     [balloon setObject:invitedFriends forKey:@"invitedFriends"];
                     
                     [[balloon ACL] setPublicWriteAccess:YES];
-                    
+     
+                    AudioServicesPlaySystemSound(PlaySoundID);
+ 
+                    [animation startAnimating];
+     
                     NSArray *responses = [[NSArray alloc] init];
                     [balloon setObject:responses forKey:@"responses"];
                     

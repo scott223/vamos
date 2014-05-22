@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C485F50192D5A120016425E /* Fluitje.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0C485F4F192D5A120016425E /* Fluitje.mp3 */; };
 		0C7BC2B3192BF9DE009C7EE9 /* Test.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0C7BC2B2192BF9DE009C7EE9 /* Test.wav */; };
 		0C84DC261925618800FB5D7F /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C84DC251925618800FB5D7F /* CustomButton.m */; };
 		0CDB53E9192651BA002A2E02 /* AnimatieControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDB53E8192651BA002A2E02 /* AnimatieControllerViewController.m */; };
@@ -67,6 +68,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C485F4F192D5A120016425E /* Fluitje.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Fluitje.mp3; sourceTree = "<group>"; };
 		0C7BC2B1192BC079009C7EE9 /* Electric.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Electric.wav; sourceTree = "<group>"; };
 		0C7BC2B2192BF9DE009C7EE9 /* Test.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Test.wav; sourceTree = "<group>"; };
 		0C84DC241925618800FB5D7F /* CustomButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				D20F4541192A9CFC0015AA1F /* KNMultiItemSelector */,
 				D21421C21925278400C7CF21 /* Vamos */,
+				D21421C31925278400C7CF21 /* Supporting Files */,
 				D21421E41925278400C7CF21 /* VamosTests */,
 				D21421BB1925278400C7CF21 /* Frameworks */,
 				D21421BA1925278400C7CF21 /* Products */,
@@ -272,11 +275,11 @@
 		D21421C21925278400C7CF21 /* Vamos */ = {
 			isa = PBXGroup;
 			children = (
-				D21421C31925278400C7CF21 /* Supporting Files */,
-				D21421D71925278400C7CF21 /* Images.xcassets */,
+				D21421CE1925278400C7CF21 /* Main.storyboard */,
 				D21421CB1925278400C7CF21 /* AppDelegate.h */,
 				D21421CC1925278400C7CF21 /* AppDelegate.m */,
-				D21421CE1925278400C7CF21 /* Main.storyboard */,
+				0CDB53E7192651BA002A2E02 /* AnimatieControllerViewController.h */,
+				0CDB53E8192651BA002A2E02 /* AnimatieControllerViewController.m */,
 				0C84DC241925618800FB5D7F /* CustomButton.h */,
 				0C84DC251925618800FB5D7F /* CustomButton.m */,
 				D21422161925545300C7CF21 /* StartViewController.h */,
@@ -287,8 +290,7 @@
 				D21421F5192527A200C7CF21 /* BalloonListTableViewController.m */,
 				D2AED2071925780900713526 /* ViewExistingBalloonTableViewController.h */,
 				D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */,
-				0CDB53E7192651BA002A2E02 /* AnimatieControllerViewController.h */,
-				0CDB53E8192651BA002A2E02 /* AnimatieControllerViewController.m */,
+				D21421D71925278400C7CF21 /* Images.xcassets */,
 			);
 			path = Vamos;
 			sourceTree = "<group>";
@@ -296,6 +298,7 @@
 		D21421C31925278400C7CF21 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C485F4F192D5A120016425E /* Fluitje.mp3 */,
 				0C7BC2B2192BF9DE009C7EE9 /* Test.wav */,
 				0C7BC2B1192BC079009C7EE9 /* Electric.wav */,
 				D21421C41925278400C7CF21 /* Vamos-Info.plist */,
@@ -304,6 +307,7 @@
 				D21421CA1925278400C7CF21 /* Vamos-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = Vamos;
 			sourceTree = "<group>";
 		};
 		D21421E41925278400C7CF21 /* VamosTests */ = {
@@ -408,6 +412,7 @@
 				D20F4569192A9CFC0015AA1F /* LICENSE in Resources */,
 				D21421C71925278400C7CF21 /* InfoPlist.strings in Resources */,
 				D20F4562192A9CFC0015AA1F /* KNDefaultImage@2x.png in Resources */,
+				0C485F50192D5A120016425E /* Fluitje.mp3 in Resources */,
 				D20F4561192A9CFC0015AA1F /* KNDefaultImage.png in Resources */,
 				D21421D01925278400C7CF21 /* Main.storyboard in Resources */,
 				D20F4563192A9CFC0015AA1F /* KNSelectorTip.png in Resources */,

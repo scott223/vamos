@@ -13,7 +13,9 @@
 #import "KNMultiItemSelector.h"
 
 @interface AnimatieControllerViewController : UIViewController <KNMultiItemSelectorDelegate, UITextFieldDelegate> {
-
+    
+    SystemSoundID PlaySoundID;
+    
     IBOutlet UIImageView *animation;
     
     NSMutableArray * friends;
