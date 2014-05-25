@@ -122,10 +122,26 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
         
-        NSLog(@"deque");
+        //NSLog(@"deque");
     }
     
+//    NSString *descriptionText = [[NSString alloc] initWithString:[[balloonList objectAtIndex:indexPath.row
+ //                                                                  ] objectForKey:@"when"]];
+//    descriptionText = [descriptionText stringByAppendingString:@", "];
+//    descriptionText = [descriptionText stringByAppendingString:[[balloonList objectAtIndex:indexPath.row] objectForKey:@"where"]];
+    
+    NSString *descriptionText = [[NSString alloc] initWithFormat:@"%d responses, %@, %@", [[[balloonList objectAtIndex:indexPath.row] objectForKey:@"responses"] count], [[balloonList objectAtIndex:indexPath.row] objectForKey:@"when"], [[balloonList objectAtIndex:indexPath.row] objectForKey:@"where"]];
+                                 
+    
     [cell.textLabel setText:[[balloonList objectAtIndex:indexPath.row] objectForKey:@"what"]];
+    [cell.detailTextLabel setText:descriptionText];
+    
+    NSString *url = [NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=square", [[balloonList objectAtIndex:indexPath.row] objectForKey:@"boss_fb_id"]];
+    
+    NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
+    UIImage *profilePic = [UIImage imageWithData:imageData];
+    
+    cell.imageView.image = profilePic;
     
     return cell;
 }
@@ -190,6 +206,7 @@
  if([segue.identifier isEqualToString:@"showExisting"])
  {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+     
     view.balloon = [balloonList objectAtIndex:path.row];
  
  }else if([segue.identifier isEqualToString:@"johnSegue"]){
@@ -197,7 +214,10 @@
  }
 }
 
--(void) ViewExistingBalloonTableViewControllerDidCancel:(ViewExistingBalloonTableViewController *)controller{
+-(void) ViewExistingBalloonTableViewControllerDidCancel
+{
+    [self.tableView reloadData];
+    //NSLog(@"hihi");
     [self.navigationController popViewControllerAnimated:YES];
 }
 

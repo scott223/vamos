@@ -52,6 +52,7 @@
 		D21422121925306C00C7CF21 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D21422091925306C00C7CF21 /* StoreKit.framework */; };
 		D21422131925306C00C7CF21 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D214220A1925306C00C7CF21 /* SystemConfiguration.framework */; };
 		D21422181925545300C7CF21 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D21422171925545300C7CF21 /* StartViewController.m */; };
+		D2A21413193259EC00542D46 /* SettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A21412193259EC00542D46 /* SettingsTableViewController.m */; };
 		D2AED2091925780900713526 /* ViewExistingBalloonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */; };
 		D2E8050D19295CE6002CEE0C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2E8050C19295CE6002CEE0C /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,8 @@
 		D214220A1925306C00C7CF21 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D21422161925545300C7CF21 /* StartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
 		D21422171925545300C7CF21 /* StartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
+		D2A21411193259EC00542D46 /* SettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
+		D2A21412193259EC00542D46 /* SettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
 		D2AED2071925780900713526 /* ViewExistingBalloonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewExistingBalloonTableViewController.h; sourceTree = "<group>"; };
 		D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewExistingBalloonTableViewController.m; sourceTree = "<group>"; };
 		D2E8050C19295CE6002CEE0C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
@@ -289,6 +292,8 @@
 				D2AED2081925780900713526 /* ViewExistingBalloonTableViewController.m */,
 				0CDB53E7192651BA002A2E02 /* AnimatieControllerViewController.h */,
 				0CDB53E8192651BA002A2E02 /* AnimatieControllerViewController.m */,
+				D2A21411193259EC00542D46 /* SettingsTableViewController.h */,
+				D2A21412193259EC00542D46 /* SettingsTableViewController.m */,
 			);
 			path = Vamos;
 			sourceTree = "<group>";
@@ -441,6 +446,7 @@
 				D20F456A192A9CFC0015AA1F /* SDImageCache.m in Sources */,
 				D21421C91925278400C7CF21 /* main.m in Sources */,
 				D20F4568192A9CFC0015AA1F /* KNSelectorItem.m in Sources */,
+				D2A21413193259EC00542D46 /* SettingsTableViewController.m in Sources */,
 				0CDB53E9192651BA002A2E02 /* AnimatieControllerViewController.m in Sources */,
 				D20F4570192A9CFC0015AA1F /* UIImageView+WebCache.m in Sources */,
 				D20F456D192A9CFC0015AA1F /* SDWebImageManager.m in Sources */,
